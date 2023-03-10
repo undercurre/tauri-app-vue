@@ -15,30 +15,32 @@ module.exports = {
     quoteProps: 'as-needed',
     // 8.尾部逗号设置，es5是尾部逗号兼容es5，none就是没有尾部逗号，all是指所有可能的情况，需要node8和es2017以上的环境。（trailingComma: "<es5|none|all>"）
     trailingComma: 'es5',
-    // 9.将多行HTML（HTML、JSX、Vue、Angular）元素的>放在最后一行的末尾，而不是单独放在下一行（不适用于自闭元素）。
+    // 9.object对象里面的key和value值和括号间的空格(bracketSpacing: <bool>)
+    bracketSpacing: true,
+    // 10.jsx标签多行属性写法时，尖括号是否另起一行(jsxBracketSameLine: <bool>)
     bracketSameLine: false,
-    // 10.将多行JSX元素的>放在最后一行的末尾，而不是单独放在下一行（不适用于自闭元素）。
+    // 11.将多行 HTML（HTML、JSX、Vue、Angular）元素放在最后一行的末尾，而不是单独放在下一行（不适用于自闭合元素）。
     jsxBracketSameLine: false,
-    // 11.箭头函数单个参数的情况是否省略括号，默认always是总是带括号（arrowParens: "<always|avoid>"）
+    // 12.箭头函数单个参数的情况是否省略括号，默认always是总是带括号（arrowParens: "<always|avoid>"）
     arrowParens: 'always',
-    // 12.range是format执行的范围，可以选执行一个文件的一部分，默认的设置是整个文件（rangeStart: <int>  rangeEnd: <int>）
+    // 13.range是format执行的范围，可以选执行一个文件的一部分，默认的设置是整个文件（rangeStart: <int>  rangeEnd: <int>）
     rangeStart: 0,
     rangeEnd: Infinity,
-    // 13.Prettier可以限制自己只格式化那些在文件顶部包含特殊注释（称为pragma）的文件。这在逐步将大型的、未格式化的代码库过渡到Prettier时非常有用。
+    // 13.Prettier 可以将自身限制为仅格式化文件顶部包含特殊注释（称为杂注）的文件。
     requirePragma: false,
-    // 14.Prettier可以在文件的顶部插入一个特殊的@format标记，指定该文件已经被Prettier格式化。这在与--require-pragma选项一起使用时效果很好。如果在文件的顶部已经有一个文档块，那么这个选项将在它和@format标记之间添加一个换行。
+    // 13.添加上述标记
     insertPragma: false,
-    // 15.默认情况下，Prettier不会改变markdown文本的包装，因为一些服务使用了对换行符敏感的渲染器，例如GitHub的评论和BitBucket。要让Prettier将散文包装成打印宽度，请将此选项改为 "alawys"。如果你想让Prettier强制所有的散文块都在一个行上，而依靠编辑器/浏览器的软包装，你可以使用 "never"。
+    // 13.换行
     proseWrap: "preserve",
-    // 16.指定HTML、Vue、Angular和Handlebars的全局空白敏感性。更多信息请参见空白敏感格式化。
-    htmlWhitespaceSensitivity: "css",
-    // 17.是否要缩进Vue文件中<script>和<style>标签内的代码。有些人（比如Vue的创建者）不缩进以保存缩进程度，但这可能会破坏编辑器中的代码折叠。
+    // 13.指定 HTML、Vue、角度和车把的全局空白敏感度。有关详细信息，请参阅区分空格的格式。
+    htmlWhitespaceSensitivity: 'css',
+    // 14.vue script和style标签中是否缩进,开启可能会破坏编辑器的代码折叠
     vueIndentScriptAndStyle: false,
-    // 18.object对象里面的key和value值和括号间的空格(bracketSpacing: <bool>)
-    bracketSpacing: true,
-    // 19.endOfLine: "<lf|crlf|cr|auto>" 行尾换行符,默认是lf,
+    // 15.endOfLine: "<lf|crlf|cr|auto>" 行尾换行符,默认是lf,
     endOfLine: 'lf',
-    // 20.embeddedLanguageFormatting: "off",默认是auto,控制被引号包裹的代码是否进行格式化
+    // 16.embeddedLanguageFormatting: "off",默认是auto,控制被引号包裹的代码是否进行格式化
     embeddedLanguageFormatting: 'off',
-    // 还有解析器Parser、File Path两个配置项
+    // 17.在 HTML、Vue 和 JSX 中每行强制使用单个属性。
+    singleAttributePerLine: true,
+    // 还有parser和filepath两个选项可以配置解析器
   }

@@ -8,8 +8,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "tauri": "tauri",
-    "eslint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore --fix src",
-    "prettier": "prettier --write ./src/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}"
+    "eslint:": "eslint --ext .js,.vue,.ts --ignore-path .gitignore --fix src",
+    "prettier:": "prettier --stdin --write /**/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.2.0",
@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.2.2",
-    "@types/node": "^18.7.10",
+    "@types/node": "^18.13.0",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
     "@vitejs/plugin-vue": "^4.0.0",
